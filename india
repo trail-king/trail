@@ -1,0 +1,24 @@
+import static spark.Spark.*;
+
+public class IndiaSuperpowerPage {
+    public static void main(String[] args) {
+        // Set up Spark server
+        port(8080); // Set the port number as per your preference
+
+        // Define a route to handle the homepage
+        get("/", (req, res) -> {
+            String html = "<html>" +
+                          "<head><title>India as a Superpower</title></head>" +
+                          "<body>" +
+                          "<h1>India as a Superpower</h1>" +
+                          "<p>India is a rising superpower with a rich cultural heritage, a rapidly growing economy, and a diverse population.</p>" +
+                          "<p>It is known for its technological advancements, space exploration programs, and contributions to various fields like science, medicine, and arts.</p>" +
+                          "<p>India's democratic values, skilled workforce, and global influence make it a prominent player on the world stage.</p>" +
+                          "<p>With its potential and growing influence, India is poised to become one of the leading superpowers in the world.</p>" +
+                          "</body>" +
+                          "</html>";
+            return html;
+        });
+    }
+}
+
